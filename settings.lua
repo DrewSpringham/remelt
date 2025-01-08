@@ -28,59 +28,13 @@
 
 
 data:extend{
-
-  --How long a fully charged generator can sustain maximum output (default 5 minutes).
-  { name          = 'er:hcg-run-time-in-seconds',
-    type          = 'int-setting' ,
-    setting_type  = 'startup'     ,
-    default_value = 300           ,
-    minimum_value = 1             ,
-    maximum_value = 10^16         ,
-    -- The order can be any string you want. It will be compared to all other order strings
-    -- like in a dictionary, and the settings will be sorted accordingly in the menu.
-    order         = 'a'           ,
-    },
-    
-  --How many seconds the generator will run at max output for one cranking (default 10 seconds).
-  { name          = 'er:hcg-run-time-per-crank-in-seconds',
-    type          = 'int-setting' ,
-    setting_type  = 'startup'     ,
-    default_value =  10           ,
-    minimum_value =  1            ,
-    maximum_value =  10^16        ,
-    order         = 'b'           ,
-    },
-
-  --How many ticks must pass between two crankings. (default: 20 ticks == 0.333 seconds).
-  --In factorio each real-life second is divided into 60 ticks. This is why the game
-  --is said to run at 60 UPS - 60 Updates per Second.
-  { name          = 'er:hcg-crank-delay-in-ticks',
-    type          = 'int-setting' ,
-    setting_type  = 'startup'     ,
-    default_value =  20           ,
-    minimum_value =  1            ,
-    maximum_value =  10^16        ,
-    order         = 'c'           ,
-    },                            
-    
-  --The maximum power output of the generator in watts (default: 20 kiloWatt).
-  { name          = 'er:hcg-power-output-in-watts',
-    type          = 'int-setting' ,
-    setting_type  = 'startup'     ,
-    default_value =  20000        ,
-    minimum_value =  1            ,
-    maximum_value =  10^16        ,
-    order         = 'd-a'         ,
-    },
-
   --If additional generators can be crafted. In data state this will
   --determine if the recipe and technology are created.
-  { name          = 'er:hcg-recipe-enabled',
+  { name          = 'bs:rm-lds-remelt',
     type          = 'bool-setting',
     setting_type  = 'startup'     ,
     default_value =  true         ,
     order         = 'g-a'         ,
-    },
-     
-  }
+  },
+}
   
